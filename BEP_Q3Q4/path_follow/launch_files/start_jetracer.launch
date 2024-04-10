@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node name="capture" pkg="data_capture" type="save_data.py"
+    output="screen"/>
+    
+  <node name="lead_car" pkg="path_follow" type="path_optimal.py"
+    output="screen"/>
+
+  <node name="follow_car1" pkg="path_follow" type="path_platoon1.py"
+    output="screen"/>
+
+  <node name="follow_car2" pkg="path_follow" type="path_platoon2.py"
+    output="screen"/>
+
+</launch>
